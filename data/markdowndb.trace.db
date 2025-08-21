@@ -1,0 +1,6 @@
+2025-08-21 02:36:01.846997-06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "NOTE" not found (this database is empty); SQL statement:
+insert into note (created_at,markdown_content,title,updated_at,id) values (?,?,?,?,default) [42104-232]
+2025-08-21 02:36:11.563415-06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "NOTE" not found (this database is empty); SQL statement:
+select n1_0.id,n1_0.created_at,n1_0.markdown_content,n1_0.title,n1_0.updated_at from note n1_0 [42104-232]

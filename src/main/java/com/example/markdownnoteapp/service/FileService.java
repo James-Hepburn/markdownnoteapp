@@ -10,10 +10,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@AllArgsConstructor
 @Service
 public class FileService {
     private NoteRepository repo;
+
+    public FileService (NoteRepository repo) {
+        this.repo = repo;
+    }
 
     public void saveFile (MultipartFile file) {
         try {
