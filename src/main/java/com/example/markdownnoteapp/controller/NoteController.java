@@ -32,9 +32,14 @@ public class NoteController {
         return this.fileService.listFiles ();
     }
 
-    @PostMapping("/check-grammar")
+    @PostMapping("/check-grammar/file")
     public String checkGrammar (@RequestParam("file") MultipartFile file) {
         return this.grammarService.checkGrammar (file);
+    }
+
+    @PostMapping("/check-grammar/text")
+    public String checkGrammar (@RequestBody String text) {
+        return this.grammarService.checkGrammar (text);
     }
 
     @GetMapping("/{title}/render")
